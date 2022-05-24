@@ -205,6 +205,8 @@ func whoamiHandler(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 
+	_, _ = fmt.Fprintln(w, "Time:", time.Now().Format(time.StampMilli))
+
 	if name != "" {
 		_, _ = fmt.Fprintln(w, "Name:", name)
 	}
